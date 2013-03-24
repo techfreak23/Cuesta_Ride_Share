@@ -18,6 +18,16 @@
 		6E9F362A16FF993400C8666F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9F362916FF993400C8666F /* Default-568h@2x.png */; };
 		6E9F362D16FF993400C8666F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E9F362B16FF993400C8666F /* MainStoryboard.storyboard */; };
 		6E9F363016FF993400C8666F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9F362F16FF993400C8666F /* ViewController.m */; };
+		6E9F363816FF9DC400C8666F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9F363716FF9DC400C8666F /* LoginViewController.m */; };
+		6E9F363B16FF9DDA00C8666F /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9F363A16FF9DDA00C8666F /* SignUpViewController.m */; };
+		6E9F364216FFA47100C8666F /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9F363C16FFA47100C8666F /* Accounts.framework */; };
+		6E9F364316FFA47100C8666F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9F363D16FFA47100C8666F /* CFNetwork.framework */; };
+		6E9F364416FFA47100C8666F /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9F363E16FFA47100C8666F /* libicucore.dylib */; };
+		6E9F364516FFA47100C8666F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9F363F16FFA47100C8666F /* Security.framework */; };
+		6E9F364616FFA47100C8666F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9F364016FFA47100C8666F /* Social.framework */; };
+		6E9F364716FFA47100C8666F /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9F364116FFA47100C8666F /* Twitter.framework */; };
+		6E9F364A16FFA48200C8666F /* FirebaseAuthClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9F364816FFA48200C8666F /* FirebaseAuthClient.framework */; };
+		6E9F364B16FFA48200C8666F /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9F364916FFA48200C8666F /* Firebase.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +47,18 @@
 		6E9F362C16FF993400C8666F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		6E9F362E16FF993400C8666F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		6E9F362F16FF993400C8666F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6E9F363616FF9DC400C8666F /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		6E9F363716FF9DC400C8666F /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		6E9F363916FF9DDA00C8666F /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		6E9F363A16FF9DDA00C8666F /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		6E9F363C16FFA47100C8666F /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		6E9F363D16FFA47100C8666F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		6E9F363E16FFA47100C8666F /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		6E9F363F16FFA47100C8666F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		6E9F364016FFA47100C8666F /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		6E9F364116FFA47100C8666F /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		6E9F364816FFA48200C8666F /* FirebaseAuthClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAuthClient.framework; path = ../../FirebaseAuthClient.framework; sourceTree = "<group>"; };
+		6E9F364916FFA48200C8666F /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Firebase.framework; path = ../../Firebase.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +66,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E9F364A16FFA48200C8666F /* FirebaseAuthClient.framework in Frameworks */,
+				6E9F364B16FFA48200C8666F /* Firebase.framework in Frameworks */,
+				6E9F364216FFA47100C8666F /* Accounts.framework in Frameworks */,
+				6E9F364316FFA47100C8666F /* CFNetwork.framework in Frameworks */,
+				6E9F364416FFA47100C8666F /* libicucore.dylib in Frameworks */,
+				6E9F364516FFA47100C8666F /* Security.framework in Frameworks */,
+				6E9F364616FFA47100C8666F /* Social.framework in Frameworks */,
+				6E9F364716FFA47100C8666F /* Twitter.framework in Frameworks */,
 				6E9F361416FF993400C8666F /* UIKit.framework in Frameworks */,
 				6E9F361616FF993400C8666F /* Foundation.framework in Frameworks */,
 				6E9F361816FF993400C8666F /* CoreGraphics.framework in Frameworks */,
@@ -73,6 +103,14 @@
 		6E9F361216FF993400C8666F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6E9F364816FFA48200C8666F /* FirebaseAuthClient.framework */,
+				6E9F364916FFA48200C8666F /* Firebase.framework */,
+				6E9F363C16FFA47100C8666F /* Accounts.framework */,
+				6E9F363D16FFA47100C8666F /* CFNetwork.framework */,
+				6E9F363E16FFA47100C8666F /* libicucore.dylib */,
+				6E9F363F16FFA47100C8666F /* Security.framework */,
+				6E9F364016FFA47100C8666F /* Social.framework */,
+				6E9F364116FFA47100C8666F /* Twitter.framework */,
 				6E9F361316FF993400C8666F /* UIKit.framework */,
 				6E9F361516FF993400C8666F /* Foundation.framework */,
 				6E9F361716FF993400C8666F /* CoreGraphics.framework */,
@@ -88,6 +126,10 @@
 				6E9F362B16FF993400C8666F /* MainStoryboard.storyboard */,
 				6E9F362E16FF993400C8666F /* ViewController.h */,
 				6E9F362F16FF993400C8666F /* ViewController.m */,
+				6E9F363616FF9DC400C8666F /* LoginViewController.h */,
+				6E9F363716FF9DC400C8666F /* LoginViewController.m */,
+				6E9F363916FF9DDA00C8666F /* SignUpViewController.h */,
+				6E9F363A16FF9DDA00C8666F /* SignUpViewController.m */,
 				6E9F361A16FF993400C8666F /* Supporting Files */,
 			);
 			path = Cuesta_Ride_Share;
@@ -176,6 +218,8 @@
 				6E9F362016FF993400C8666F /* main.m in Sources */,
 				6E9F362416FF993400C8666F /* AppDelegate.m in Sources */,
 				6E9F363016FF993400C8666F /* ViewController.m in Sources */,
+				6E9F363816FF9DC400C8666F /* LoginViewController.m in Sources */,
+				6E9F363B16FF9DDA00C8666F /* SignUpViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,9 +304,14 @@
 		6E9F363416FF993400C8666F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../..\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Cuesta_Ride_Share/Cuesta_Ride_Share-Prefix.pch";
 				INFOPLIST_FILE = "Cuesta_Ride_Share/Cuesta_Ride_Share-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -271,9 +320,14 @@
 		6E9F363516FF993400C8666F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../..\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Cuesta_Ride_Share/Cuesta_Ride_Share-Prefix.pch";
 				INFOPLIST_FILE = "Cuesta_Ride_Share/Cuesta_Ride_Share-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

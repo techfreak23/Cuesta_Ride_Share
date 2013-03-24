@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LoginViewController.h
 //  Cuesta_Ride_Share
 //
 //  Created by Arturo Sevilla on 3/24/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController <UIActionSheetDelegate>
+@interface LoginViewController : UITableViewController
 
 @end
