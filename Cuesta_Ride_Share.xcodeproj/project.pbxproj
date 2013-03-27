@@ -28,6 +28,14 @@
 		6E9F364716FFA47100C8666F /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9F364116FFA47100C8666F /* Twitter.framework */; };
 		6E9F364A16FFA48200C8666F /* FirebaseAuthClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9F364816FFA48200C8666F /* FirebaseAuthClient.framework */; };
 		6E9F364B16FFA48200C8666F /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9F364916FFA48200C8666F /* Firebase.framework */; };
+		6EA2CCCB1702585200BA447A /* DemoPresentationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EA2CCC81702585200BA447A /* DemoPresentationViewController.xib */; };
+		6EA2CCCC1702585200BA447A /* DemoPresentationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA2CCC91702585200BA447A /* DemoPresentationViewController.m */; };
+		6EA2CCCF17025DAD00BA447A /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA2CCCE17025DAD00BA447A /* UserViewController.m */; };
+		6EA2CCD11702667600BA447A /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EA2CCD01702667600BA447A /* UserViewController.xib */; };
+		6EA2CCD3170267AC00BA447A /* ChangePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EA2CCD2170267AC00BA447A /* ChangePasswordViewController.xib */; };
+		6EA6D3D1170130300090373D /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA6D3D0170130300090373D /* ChangePasswordViewController.m */; };
+		6EA6D3D4170141DC0090373D /* cuesta-college.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6EA6D3D2170141DC0090373D /* cuesta-college.gif */; };
+		6EA6D3D5170141DC0090373D /* cuesta-college-logo2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6EA6D3D3170141DC0090373D /* cuesta-college-logo2.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +67,17 @@
 		6E9F364116FFA47100C8666F /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		6E9F364816FFA48200C8666F /* FirebaseAuthClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAuthClient.framework; path = ../../FirebaseAuthClient.framework; sourceTree = "<group>"; };
 		6E9F364916FFA48200C8666F /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Firebase.framework; path = ../../Firebase.framework; sourceTree = "<group>"; };
+		6EA2CCC81702585200BA447A /* DemoPresentationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoPresentationViewController.xib; sourceTree = "<group>"; };
+		6EA2CCC91702585200BA447A /* DemoPresentationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoPresentationViewController.m; sourceTree = "<group>"; };
+		6EA2CCCA1702585200BA447A /* DemoPresentationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoPresentationViewController.h; sourceTree = "<group>"; };
+		6EA2CCCD17025DAD00BA447A /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
+		6EA2CCCE17025DAD00BA447A /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
+		6EA2CCD01702667600BA447A /* UserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserViewController.xib; sourceTree = "<group>"; };
+		6EA2CCD2170267AC00BA447A /* ChangePasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangePasswordViewController.xib; sourceTree = "<group>"; };
+		6EA6D3CF170130300090373D /* ChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePasswordViewController.h; sourceTree = "<group>"; };
+		6EA6D3D0170130300090373D /* ChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordViewController.m; sourceTree = "<group>"; };
+		6EA6D3D2170141DC0090373D /* cuesta-college.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "cuesta-college.gif"; sourceTree = "<group>"; };
+		6EA6D3D3170141DC0090373D /* cuesta-college-logo2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "cuesta-college-logo2.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +140,7 @@
 		6E9F361916FF993400C8666F /* Cuesta_Ride_Share */ = {
 			isa = PBXGroup;
 			children = (
+				6EA6D3D6170141E30090373D /* images */,
 				6E9F362216FF993400C8666F /* AppDelegate.h */,
 				6E9F362316FF993400C8666F /* AppDelegate.m */,
 				6E9F362B16FF993400C8666F /* MainStoryboard.storyboard */,
@@ -130,6 +150,15 @@
 				6E9F363716FF9DC400C8666F /* LoginViewController.m */,
 				6E9F363916FF9DDA00C8666F /* SignUpViewController.h */,
 				6E9F363A16FF9DDA00C8666F /* SignUpViewController.m */,
+				6EA2CCCD17025DAD00BA447A /* UserViewController.h */,
+				6EA2CCCE17025DAD00BA447A /* UserViewController.m */,
+				6EA2CCD01702667600BA447A /* UserViewController.xib */,
+				6EA6D3CF170130300090373D /* ChangePasswordViewController.h */,
+				6EA6D3D0170130300090373D /* ChangePasswordViewController.m */,
+				6EA2CCD2170267AC00BA447A /* ChangePasswordViewController.xib */,
+				6EA2CCCA1702585200BA447A /* DemoPresentationViewController.h */,
+				6EA2CCC91702585200BA447A /* DemoPresentationViewController.m */,
+				6EA2CCC81702585200BA447A /* DemoPresentationViewController.xib */,
 				6E9F361A16FF993400C8666F /* Supporting Files */,
 			);
 			path = Cuesta_Ride_Share;
@@ -147,6 +176,15 @@
 				6E9F362916FF993400C8666F /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6EA6D3D6170141E30090373D /* images */ = {
+			isa = PBXGroup;
+			children = (
+				6EA6D3D2170141DC0090373D /* cuesta-college.gif */,
+				6EA6D3D3170141DC0090373D /* cuesta-college-logo2.jpg */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +243,11 @@
 				6E9F362816FF993400C8666F /* Default@2x.png in Resources */,
 				6E9F362A16FF993400C8666F /* Default-568h@2x.png in Resources */,
 				6E9F362D16FF993400C8666F /* MainStoryboard.storyboard in Resources */,
+				6EA6D3D4170141DC0090373D /* cuesta-college.gif in Resources */,
+				6EA6D3D5170141DC0090373D /* cuesta-college-logo2.jpg in Resources */,
+				6EA2CCCB1702585200BA447A /* DemoPresentationViewController.xib in Resources */,
+				6EA2CCD11702667600BA447A /* UserViewController.xib in Resources */,
+				6EA2CCD3170267AC00BA447A /* ChangePasswordViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +263,9 @@
 				6E9F363016FF993400C8666F /* ViewController.m in Sources */,
 				6E9F363816FF9DC400C8666F /* LoginViewController.m in Sources */,
 				6E9F363B16FF9DDA00C8666F /* SignUpViewController.m in Sources */,
+				6EA6D3D1170130300090373D /* ChangePasswordViewController.m in Sources */,
+				6EA2CCCC1702585200BA447A /* DemoPresentationViewController.m in Sources */,
+				6EA2CCCF17025DAD00BA447A /* UserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +353,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../..\"",
+					"\"$(SRCROOT)/../../../Documents/FacebookSDK\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Cuesta_Ride_Share/Cuesta_Ride_Share-Prefix.pch";
@@ -323,6 +370,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../..\"",
+					"\"$(SRCROOT)/../../../Documents/FacebookSDK\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Cuesta_Ride_Share/Cuesta_Ride_Share-Prefix.pch";
@@ -352,6 +400,7 @@
 				6E9F363516FF993400C8666F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

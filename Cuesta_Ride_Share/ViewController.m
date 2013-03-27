@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import <FirebaseAuthClient/FirebaseAuthClient.h>
+#import "DemoPresentationViewController.h"
 
 @interface ViewController ()
 
@@ -18,6 +18,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -27,34 +29,35 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Button Actions
-
-- (IBAction)login:(id)sender
+- (IBAction)contactUs:(id)sender
 {
-    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Login With:" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Facebook?", @"Email/Password", nil];
+    /*
+    MFMailComposeViewController *mail = [[MFMailComposeViewController alloc] initWithRootViewController:self];
+    mail.mailComposeDelegate = self;
     
-    [actionSheet showInView:self.view];
-    //[self performSegueWithIdentifier:@"login" sender:self];
+    [mail setSubject:@"Cuesta Ride Share iOS feedback."];
+    
+    NSArray *toRecipients = [NSArray arrayWithObjects:@"techfreak23@gmail.com", nil];
+    
+    [mail setToRecipients:toRecipients];
+    
+    [self presentViewController:mail animated:YES completion:nil];
+     */
 }
 
-- (IBAction)signup:(id)sender
+- (IBAction)showDemo:(id)sender
 {
-    [self performSegueWithIdentifier:@"signup" sender:self];
+    DemoPresentationViewController *demo = [[DemoPresentationViewController alloc] initWithNibName:@"DemoPresentationViewController" bundle:nil];
+    [self presentViewController:demo animated:YES completion:nil];
 }
 
-#pragma mark - Action Sheet Delegate Methods
 
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+/*
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
 {
-    if (buttonIndex == 1)
-    {
-        [self performSegueWithIdentifier:@"login" sender:self];
-    } else if (buttonIndex == 2) {
-        Firebase *fb = [[Firebase alloc] initWithUrl:@"https://cuesta-ride-share.firebaseio.com/"];
-        FirebaseAuthClient *authClient = [[FirebaseAuthClient alloc] initWithRef:fb];
-        
-        [authClient loginToFacebookAppWithId:<#(NSString *)#> permissions:<#(NSArray *)#> withCompletionBlock:<#^(NSError *error, FAUser *user)block#>]
-    }
+    [[self presentingViewController] dismissViewControllerAnimated:YES completion:nil];
 }
+*/
+ 
 
 @end

@@ -9,7 +9,7 @@
             <objects>
                 <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJl-6J-eAm">
@@ -25,7 +25,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="k3G-p6-VO8" kind="modal" identifier="login" id="fq5-pL-xck"/>
+                                    <segue destination="k3G-p6-VO8" kind="modal" id="SFh-gR-eV9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9t-3p-CEj">
@@ -41,30 +41,87 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Efi-m9-aYp" kind="modal" identifier="signup" id="2md-Wv-lJH"/>
+                                    <segue destination="Efi-m9-aYp" kind="modal" id="Lxz-5X-8n8"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Cuesta RideShare" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edZ-15-Tdy">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="OWD-sc-aoU"/>
+                                    <constraint firstAttribute="height" constant="21" id="jwo-eL-BMm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mo2-x9-7Jc">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="LPi-Yg-wB6"/>
+                                    <constraint firstAttribute="width" constant="80" id="lFH-Zd-ITt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                <state key="normal" title="Contact Us">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="contactUs:" destination="2" eventType="touchUpInside" id="GhG-SK-Tih"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uz4-We-NpF">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="gr5-xz-BiP"/>
+                                    <constraint firstAttribute="height" constant="22" id="lhd-YT-1v4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                <state key="normal" title="How It Works">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showDemo:" destination="2" eventType="touchUpInside" id="QsA-3i-cII"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cuesta-college-logo2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="M4g-1f-Tzl">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="155" id="VMw-73-SP1"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="uz4-We-NpF" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="2Ls-ZL-frO"/>
                             <constraint firstAttribute="trailing" secondItem="k9t-3p-CEj" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="3eM-Vw-5JE"/>
+                            <constraint firstItem="uz4-We-NpF" firstAttribute="top" secondItem="mo2-x9-7Jc" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="3s0-Uz-blt"/>
                             <constraint firstItem="KJl-6J-eAm" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="BHS-Gx-vVm"/>
-                            <constraint firstAttribute="bottom" secondItem="k9t-3p-CEj" secondAttribute="bottom" constant="162" id="DZV-aK-pfg"/>
-                            <constraint firstItem="k9t-3p-CEj" firstAttribute="top" secondItem="KJl-6J-eAm" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="aZr-Uz-22g"/>
+                            <constraint firstItem="mo2-x9-7Jc" firstAttribute="centerX" secondItem="k9t-3p-CEj" secondAttribute="centerX" type="default" id="HI6-GM-6KV"/>
+                            <constraint firstAttribute="trailing" secondItem="M4g-1f-Tzl" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Hoa-tN-k72"/>
+                            <constraint firstItem="M4g-1f-Tzl" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="Lzh-ZS-QKi"/>
+                            <constraint firstItem="KJl-6J-eAm" firstAttribute="centerX" secondItem="edZ-15-Tdy" secondAttribute="centerX" type="default" id="QhB-U8-gs1"/>
                             <constraint firstItem="k9t-3p-CEj" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="dtb-HH-QSF"/>
+                            <constraint firstItem="M4g-1f-Tzl" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="hgt-Xv-ISh"/>
+                            <constraint firstItem="k9t-3p-CEj" firstAttribute="top" secondItem="KJl-6J-eAm" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="iCh-DB-MjM"/>
+                            <constraint firstItem="edZ-15-Tdy" firstAttribute="top" secondItem="M4g-1f-Tzl" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="iEJ-Gi-98t"/>
                             <constraint firstAttribute="trailing" secondItem="KJl-6J-eAm" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="imo-bU-WDC"/>
+                            <constraint firstAttribute="bottom" secondItem="k9t-3p-CEj" secondAttribute="bottom" constant="143" id="k8i-FV-dyt"/>
+                            <constraint firstItem="mo2-x9-7Jc" firstAttribute="centerX" secondItem="uz4-We-NpF" secondAttribute="centerX" type="default" id="xpK-Mo-MZi"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--Table View Controller - Root View Controller-->
+        <!--Login View Controller - Root View Controller-->
         <scene sceneID="8hd-FI-mOL">
             <objects>
-                <tableViewController id="lAG-ZH-Ime" sceneMemberID="viewController">
+                <tableViewController id="lAG-ZH-Ime" customClass="LoginViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="kgd-qL-11m">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
@@ -82,7 +139,7 @@
                                                         <constraint firstAttribute="width" constant="260" id="8it-vr-Maw"/>
                                                         <constraint firstAttribute="height" constant="43" id="e0a-DE-QZv"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
@@ -100,12 +157,12 @@
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hLf-9w-9Qd">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hLf-9w-9Qd">
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="43" id="EmZ-JO-nmz"/>
                                                         <constraint firstAttribute="width" constant="260" id="YFY-i7-DHV"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
@@ -121,23 +178,31 @@
                         </sections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="NIf-Mh-a3c">
-                        <barButtonItem key="rightBarButtonItem" title="Login" id="o9L-O6-w1P">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Login" id="o9L-O6-w1P">
                             <color key="tintColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
+                            <connections>
+                                <action selector="login:" destination="lAG-ZH-Ime" id="Luv-aS-nnh"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="email" destination="5f2-Xu-4uh" id="VXB-tx-lUu"/>
+                        <outlet property="loginButton" destination="o9L-O6-w1P" id="JtE-M7-AHr"/>
+                        <outlet property="password" destination="hLf-9w-9Qd" id="p1f-d3-2fv"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d64-nv-iHz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1206" y="-414"/>
+            <point key="canvasLocation" x="1422" y="-371"/>
         </scene>
-        <!--Table View Controller - Root View Controller-->
+        <!--Sign Up View Controller - Root View Controller-->
         <scene sceneID="cGX-wg-71Q">
             <objects>
-                <tableViewController id="ebJ-wZ-WtY" sceneMemberID="viewController">
+                <tableViewController id="ebJ-wZ-WtY" customClass="SignUpViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="qO7-dy-sBp">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection id="cpo-h1-G92">
                                 <cells>
@@ -147,8 +212,22 @@
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YKt-5D-uI0">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="43" id="Y9N-m3-1HD"/>
+                                                        <constraint firstAttribute="width" constant="260" id="hcb-qh-TRK"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="YKt-5D-uI0" firstAttribute="centerY" secondItem="mtL-sX-0ak" secondAttribute="centerY" type="default" id="GTc-d1-TBp"/>
+                                            <constraint firstItem="YKt-5D-uI0" firstAttribute="centerX" secondItem="mtL-sX-0ak" secondAttribute="centerX" type="default" id="gai-vS-CDb"/>
+                                        </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="sl7-1t-JfT">
                                         <rect key="frame" x="0.0" y="55" width="320" height="45"/>
@@ -156,8 +235,22 @@
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tN2-ma-si2">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="43" id="9gG-5F-tWt"/>
+                                                        <constraint firstAttribute="width" constant="260" id="URd-je-5Vk"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="tN2-ma-si2" firstAttribute="top" secondItem="sl7-1t-JfT" secondAttribute="top" type="default" id="gyY-P8-N8h"/>
+                                            <constraint firstItem="tN2-ma-si2" firstAttribute="centerX" secondItem="sl7-1t-JfT" secondAttribute="centerX" type="default" id="nXz-7L-bA9"/>
+                                        </constraints>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -169,8 +262,22 @@
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A62-Zx-ElB">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="43" id="fjD-s1-gvt"/>
+                                                        <constraint firstAttribute="width" constant="260" id="iRU-w7-gxM"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="A62-Zx-ElB" firstAttribute="centerX" secondItem="9su-8v-dr0" secondAttribute="centerX" type="default" id="pIj-pU-2Sf"/>
+                                            <constraint firstItem="A62-Zx-ElB" firstAttribute="centerY" secondItem="9su-8v-dr0" secondAttribute="centerY" type="default" id="rGu-s7-Vhs"/>
+                                        </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="1p3-1r-AIj">
                                         <rect key="frame" x="0.0" y="165" width="320" height="45"/>
@@ -178,12 +285,26 @@
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cMi-Zw-Ryr">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="43" id="WNN-nm-9L8"/>
+                                                        <constraint firstAttribute="width" constant="260" id="qjZ-BH-Bfj"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="cMi-Zw-Ryr" firstAttribute="top" secondItem="1p3-1r-AIj" secondAttribute="top" type="default" id="AK9-qm-fdY"/>
+                                            <constraint firstItem="cMi-Zw-Ryr" firstAttribute="centerX" secondItem="1p3-1r-AIj" secondAttribute="centerX" type="default" id="wJl-Ah-Wpn"/>
+                                        </constraints>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection id="sla-Jn-WpM">
+                            <tableViewSection footerTitle="Passwords must be AT LEAST 7 characters long." id="sla-Jn-WpM">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="F54-yF-xvb">
                                         <rect key="frame" x="0.0" y="230" width="320" height="45"/>
@@ -191,8 +312,22 @@
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HrC-bx-dTp">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="260" id="Guu-y6-SKF"/>
+                                                        <constraint firstAttribute="height" constant="43" id="lam-CM-7hw"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="HrC-bx-dTp" firstAttribute="centerY" secondItem="F54-yF-xvb" secondAttribute="centerY" type="default" id="8NR-Gi-jCa"/>
+                                            <constraint firstItem="HrC-bx-dTp" firstAttribute="centerX" secondItem="F54-yF-xvb" secondAttribute="centerX" type="default" id="nMn-h1-lQy"/>
+                                        </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="evU-su-7m3">
                                         <rect key="frame" x="0.0" y="275" width="320" height="45"/>
@@ -200,22 +335,48 @@
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ipL-dc-LWf">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="260" id="BGh-CM-9Lh"/>
+                                                        <constraint firstAttribute="height" constant="43" id="jcc-uN-WUj"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="ipL-dc-LWf" firstAttribute="centerX" secondItem="evU-su-7m3" secondAttribute="centerX" type="default" id="S1R-7k-Rr8"/>
+                                            <constraint firstItem="ipL-dc-LWf" firstAttribute="top" secondItem="evU-su-7m3" secondAttribute="top" type="default" id="lIz-JS-dOG"/>
+                                        </constraints>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="9Eo-oR-ikU">
-                        <barButtonItem key="rightBarButtonItem" title="Sign Up" id="h9a-4x-t5P">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Sign Up" id="h9a-4x-t5P">
                             <color key="tintColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
+                            <connections>
+                                <action selector="signUp:" destination="ebJ-wZ-WtY" id="brE-HN-PjR"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="confirmPassword" destination="ipL-dc-LWf" id="vSc-0R-ZHj"/>
+                        <outlet property="email" destination="A62-Zx-ElB" id="hpe-yw-Sat"/>
+                        <outlet property="firstName" destination="YKt-5D-uI0" id="KH7-iU-UKM"/>
+                        <outlet property="lastName" destination="tN2-ma-si2" id="9mO-PX-Tpo"/>
+                        <outlet property="password" destination="HrC-bx-dTp" id="bed-bl-UMK"/>
+                        <outlet property="phone" destination="cMi-Zw-Ryr" id="OoR-iE-lmm"/>
+                        <outlet property="signUpButton" destination="h9a-4x-t5P" id="8jl-vS-GVG"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lex-N5-WQL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1206" y="312"/>
+            <point key="canvasLocation" x="1422" y="447"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lwX-h8-fgr">
@@ -230,7 +391,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SN5-X8-sUb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="672" y="312"/>
+            <point key="canvasLocation" x="888" y="447"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Lyd-I5-EYe">
@@ -245,24 +406,15 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8TR-7Y-hbv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="672" y="-415"/>
+            <point key="canvasLocation" x="888" y="-372"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="login:"/>
-                <relationship kind="action" name="signup:"/>
-            </relationships>
-        </class>
-    </classes>
+    <resources>
+        <image name="cuesta-college-logo2.jpg" width="250" height="148"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>
