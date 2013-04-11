@@ -36,6 +36,7 @@
 		6EA6D3D1170130300090373D /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA6D3D0170130300090373D /* ChangePasswordViewController.m */; };
 		6EA6D3D4170141DC0090373D /* cuesta-college.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6EA6D3D2170141DC0090373D /* cuesta-college.gif */; };
 		6EA6D3D5170141DC0090373D /* cuesta-college-logo2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6EA6D3D3170141DC0090373D /* cuesta-college-logo2.jpg */; };
+		6ED4787B1703951B0061E1BF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ED4787A1703951B0061E1BF /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		6EA6D3D0170130300090373D /* ChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordViewController.m; sourceTree = "<group>"; };
 		6EA6D3D2170141DC0090373D /* cuesta-college.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "cuesta-college.gif"; sourceTree = "<group>"; };
 		6EA6D3D3170141DC0090373D /* cuesta-college-logo2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "cuesta-college-logo2.jpg"; sourceTree = "<group>"; };
+		6ED4787A1703951B0061E1BF /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6ED4787B1703951B0061E1BF /* MessageUI.framework in Frameworks */,
 				6E9F364A16FFA48200C8666F /* FirebaseAuthClient.framework in Frameworks */,
 				6E9F364B16FFA48200C8666F /* Firebase.framework in Frameworks */,
 				6E9F364216FFA47100C8666F /* Accounts.framework in Frameworks */,
@@ -122,6 +125,7 @@
 		6E9F361216FF993400C8666F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6ED4787A1703951B0061E1BF /* MessageUI.framework */,
 				6E9F364816FFA48200C8666F /* FirebaseAuthClient.framework */,
 				6E9F364916FFA48200C8666F /* Firebase.framework */,
 				6E9F363C16FFA47100C8666F /* Accounts.framework */,

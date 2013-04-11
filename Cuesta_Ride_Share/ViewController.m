@@ -31,18 +31,18 @@
 
 - (IBAction)contactUs:(id)sender
 {
-    /*
-    MFMailComposeViewController *mail = [[MFMailComposeViewController alloc] initWithRootViewController:self];
-    mail.mailComposeDelegate = self;
     
-    [mail setSubject:@"Cuesta Ride Share iOS feedback."];
+    MFMailComposeViewController *composer = [[MFMailComposeViewController alloc] init];
+    composer.mailComposeDelegate = self;
+    
+    [composer setSubject:@"Cuesta Ride Share iOS feedback."];
     
     NSArray *toRecipients = [NSArray arrayWithObjects:@"techfreak23@gmail.com", nil];
     
-    [mail setToRecipients:toRecipients];
+    [composer setToRecipients:toRecipients];
     
-    [self presentViewController:mail animated:YES completion:nil];
-     */
+    [self presentViewController:composer animated:YES completion:nil];
+     
 }
 
 - (IBAction)showDemo:(id)sender
@@ -52,12 +52,10 @@
 }
 
 
-/*
 - (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
 {
     [[self presentingViewController] dismissViewControllerAnimated:YES completion:nil];
 }
-*/
- 
+
 
 @end
