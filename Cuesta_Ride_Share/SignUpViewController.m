@@ -7,7 +7,6 @@
 //
 
 #import "SignUpViewController.h"
-#import "UserViewController.h"
 
 @interface SignUpViewController ()
 
@@ -15,7 +14,7 @@
 
 @implementation SignUpViewController
 
-@synthesize firstName, lastName, email, phone, password, confirmPassword, signUpButton, firebase, authClient;
+@synthesize firstName, lastName, email, phone, password, confirmPassword;
 
 
 - (void)viewDidLoad
@@ -25,6 +24,7 @@
     self.title = @"New User";
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Sign Up" style:UIBarButtonItemStyleDone target:self action:@selector(signUp:)];
     
     self.firstName.delegate = self;
     self.lastName.delegate = self;
@@ -67,9 +67,9 @@
 - (void)validateTextFields
 {
     if (self.email.text.length < 12 || self.password.text.length < 7 || self.password.text.length < 7) {
-        self.signUpButton.enabled = NO;
+        self.navigationItem.rightBarButtonItem.enabled = NO;
     } else {
-        self.signUpButton.enabled = YES;
+        self.navigationItem.rightBarButtonItem.enabled = YES;
     }
 }
 
@@ -123,30 +123,14 @@
         
         [alert show];
     } else {
-        firebase = [[Firebase alloc] initWithUrl:@"https://cuesta-ride-share.firebaseio.com/"];
-        authClient = [[FirebaseAuthClient alloc] initWithRef:firebase];
-        
-        [authClient createUserWithEmail:self.email.text password:self.password.text andCompletionBlock:^(NSError *error, FAUser *user) {
-            if (error != nil) {
-                NSLog(@"Login Failed");
-            } else {
-                NSLog(@"User %@", user);
-                UserViewController *info = [[UserViewController alloc] initWithNibName:@"UserViewController" bundle:nil];
-                
-                //[info setFirebase:self.firebase];
-                //[info setAuthClient:self.authClient];
-                
-                [self presentViewController:info animated:YES completion:nil];
-                
-            }
-        }];
+        [self performSegueWithIdentifier:@"signupPath" sender:self];
     }
     
 }
 
 - (void)cancel:(id)sender
 {
-    [[self presentingViewController] dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

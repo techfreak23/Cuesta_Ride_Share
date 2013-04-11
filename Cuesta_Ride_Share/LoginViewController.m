@@ -8,15 +8,9 @@
 
 #import "LoginViewController.h"
 
-
-@interface LoginViewController ()
-
-@end
-
 @implementation LoginViewController
 
-@synthesize email, password, loginButton, firebase, authClient;
-
+@synthesize email, password;
 
 - (void)viewDidLoad
 {
@@ -24,6 +18,8 @@
     
     self.title = @"Returning User";
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Login" style:UIBarButtonItemStyleDone target:self action:@selector(login:)];
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel:)];
     
@@ -33,17 +29,15 @@
     self.email.returnKeyType = UIReturnKeyNext;
     self.password.returnKeyType = UIReturnKeyDone;
     
+    self.email.keyboardType = UIKeyboardTypeEmailAddress;
     self.password.secureTextEntry = YES;
     
-    [self.email becomeFirstResponder];
+    self.password.enablesReturnKeyAutomatically = YES;
+    self.password.clearsOnBeginEditing = YES;
+    self.password.clearButtonMode = UITextFieldViewModeWhileEditing;
     
+    [self.email becomeFirstResponder];
     [self validateTextFields];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -76,44 +70,23 @@
 
 - (void)validateTextFields
 {
-    if (self.email.text.length < 12 || self.password.text.length < 7) {
-        self.loginButton.enabled = NO;
+    if (self.email.text.length > 11 || self.password.text.length > 6) {
+        self.navigationItem.rightBarButtonItem.enabled = YES;
     } else {
-        self.loginButton.enabled = YES;
+        self.navigationItem.rightBarButtonItem.enabled = NO;
     }
 }
 
 #pragma mark - Button Actions
 
-- (IBAction)login:(id)sender
+- (void)login:(id)sender
 {
-    
-    self.firebase = [[Firebase alloc] initWithUrl:@"https://cuesta-ride-share.firebaseio.com/"];
-    self.authClient = [[FirebaseAuthClient alloc] initWithRef:firebase];
-    
-    [authClient loginWithEmail:self.email.text andPassword:self.password.text withCompletionBlock:^(NSError *error, FAUser *user) {
-        if (error != nil) {
-            UIAlertView *fail = [[UIAlertView alloc] initWithTitle:nil message:@"Login Failed!" delegate:self cancelButtonTitle:@"Okay" otherButtonTitles: nil];
-            
-            [fail show];
-        } else {
-            NSLog(@"Logged in successfully with email %@ user %@", user.email, user.userId);
-            UserViewController *detail = [[UserViewController alloc] initWithNibName:@"UserViewController" bundle:nil];
-            
-            [detail setAuthClient:authClient];
-            [detail setFirebase:firebase];
-            
-            [self presentViewController:detail animated:YES completion:nil];
-            
-            
-        }
-    }];
-     
+    [self performSegueWithIdentifier:@"loginPath" sender:self];
 }
 
 - (void)cancel:(id)sender
 {
-    [[self presentingViewController] dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

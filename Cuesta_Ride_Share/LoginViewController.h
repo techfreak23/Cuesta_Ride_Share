@@ -7,20 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <FirebaseAuthClient/FirebaseAuthClient.h>
-#import "UserViewController.h"
 
-@interface LoginViewController : UITableViewController <UITextFieldDelegate>
+@interface LoginViewController : UITableViewController <UITextFieldDelegate, UIAlertViewDelegate>
 {
     IBOutlet UITextField *email;
     IBOutlet UITextField *password;
-    IBOutlet UIBarButtonItem *loginButton;
 }
 
 @property (nonatomic, strong) IBOutlet UITextField *email;
 @property (nonatomic, strong) IBOutlet UITextField *password;
-@property (nonatomic, strong) IBOutlet UIBarButtonItem *loginButton;
-@property (nonatomic, strong) Firebase *firebase;
-@property (nonatomic, strong) FirebaseAuthClient *authClient;
 
 @end
