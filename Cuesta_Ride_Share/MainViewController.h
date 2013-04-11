@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
+#import "ECSlidingViewController.h"
+#import "MenuViewController.h"
 
 @interface MainViewController : UITableViewController
+{
+    UIViewController *menu;
+}
+
+@property (nonatomic, strong) UIViewController *menu;
 
 @end

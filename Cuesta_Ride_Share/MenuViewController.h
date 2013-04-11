@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ECSlidingViewController.h"
+#import "MainViewController.h"
 
 @interface MenuViewController : UITableViewController
+{
+    UIViewController *main;
+}
+
+@property (nonatomic, strong) UIViewController *main;
 
 @end

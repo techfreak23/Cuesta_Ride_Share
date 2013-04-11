@@ -7,59 +7,67 @@
 //
 
 #import "MenuViewController.h"
+@interface MenuViewController()
 
-@interface MenuViewController ()
+@property (nonatomic, strong) NSArray *menuItems;
+@property (nonatomic, strong) NSArray *menuIcons;
 
 @end
 
 @implementation MenuViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+@synthesize main;
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.menuItems = [NSArray arrayWithObjects:@"Upcoming Rides", @"Account Settings", @"Payment Information", @"Become A Driver", @"Logout", nil];
+    self.menuIcons = [NSArray arrayWithObjects:@"53-house.png", @"20-gear2", @"192-credit-card.png", @"73-radar.png", @"54-lock.png", nil];
+    
+    [self.slidingViewController setAnchorRightRevealAmount:280.0f];
+    self.slidingViewController.underLeftWidthLayout = ECFixedRevealWidth;
+    
+    if ([self.slidingViewController.topViewController isKindOfClass:[MainViewController class]]) {
+    self.main = self.slidingViewController.topViewController;
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
+    [self setMain:nil];
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return self.menuItems.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+    }
+    
+    cell.textLabel.text = [self.menuItems objectAtIndex:indexPath.row];
+    cell.imageView.image = [UIImage imageNamed:[self.menuIcons objectAtIndex:indexPath.row]];
     
     // Configure the cell...
     
@@ -109,13 +117,23 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    if (![[self.menuItems objectAtIndex:indexPath.row] isEqual:@"Logout"]) {
+        
+        if ([[self.menuItems objectAtIndex:indexPath.row] isEqual:@"Upcoming Rides"]) {
+            [self.slidingViewController anchorTopViewOffScreenTo:ECRight animations:nil onComplete:^ {
+                CGRect frame = self.slidingViewController.topViewController.view.frame;
+                
+                if (self.main == nil) {
+                    NSLog(@"Main view is being reinitialized...");
+                    self.main = [self.storyboard instantiateViewControllerWithIdentifier:@"MainTop"];
+                }
+                
+                self.slidingViewController.topViewController = self.main;
+                self.slidingViewController.topViewController.view.frame = frame;
+                [self.slidingViewController resetTopView];
+            }];
+        }
+    }
 }
 
 @end
