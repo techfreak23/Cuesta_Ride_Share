@@ -10,7 +10,7 @@
 #import "ECSlidingViewController.h"
 #import "MainViewController.h"
 
-@interface MenuViewController : UITableViewController
+@interface MenuViewController : UITableViewController <UIActionSheetDelegate>
 {
     UIViewController *main;
 }

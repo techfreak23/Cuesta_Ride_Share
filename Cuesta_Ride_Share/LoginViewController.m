@@ -70,7 +70,7 @@
 
 - (void)validateTextFields
 {
-    if (self.email.text.length > 11 || self.password.text.length > 6) {
+    if (self.email.text.length > 11 && self.password.text.length > 6) {
         self.navigationItem.rightBarButtonItem.enabled = YES;
     } else {
         self.navigationItem.rightBarButtonItem.enabled = NO;

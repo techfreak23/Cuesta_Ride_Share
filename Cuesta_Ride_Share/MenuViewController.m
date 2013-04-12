@@ -27,7 +27,7 @@
     self.menuIcons = [NSArray arrayWithObjects:@"53-house.png", @"20-gear2", @"192-credit-card.png", @"73-radar.png", @"54-lock.png", nil];
     
     [self.slidingViewController setAnchorRightRevealAmount:280.0f];
-    self.slidingViewController.underLeftWidthLayout = ECFixedRevealWidth;
+    self.slidingViewController.underLeftWidthLayout = ECFullWidth;
     
     if ([self.slidingViewController.topViewController isKindOfClass:[MainViewController class]]) {
     self.main = self.slidingViewController.topViewController;
@@ -133,6 +133,20 @@
                 [self.slidingViewController resetTopView];
             }];
         }
+    } else {
+        UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"Are you sure?" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Yes" otherButtonTitles:nil];
+        
+        [sheet showInView:self.view];
+    }
+}
+
+#pragma mark - Action sheet delegate methods
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0) {
+        self.slidingViewController.topViewController = [self.storyboard instantiateInitialViewController];
+        [self.slidingViewController resetTopView];
     }
 }
 
